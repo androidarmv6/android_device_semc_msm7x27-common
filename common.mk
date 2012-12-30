@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
+
 # Hardware
 PRODUCT_PACKAGES += \
     gps.delta \
