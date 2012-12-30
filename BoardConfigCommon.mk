@@ -61,7 +61,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/semc/msm7x27-common/custombootimg.mk
 ## Graphics
 # Force non usage of VSync
 BOARD_EGL_NEEDS_LEGACY_FB := true
-BOARD_EGL_CFG := device/semc/msm7x27-common/prebuilt/lib/egl/egl.cfg
 
 ## Qualcomm and Adreno Hardware
 COMMON_GLOBAL_CFLAGS += -DANCIENT_GL
