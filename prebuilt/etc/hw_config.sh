@@ -4,6 +4,11 @@ echo 2400 > $dev/voltage_mv
 
 # lm3530 LMU configuration
 dev=/sys/devices/platform/i2c-adapter/i2c-0/0-0036
+if [ ! -f $dev ];
+then
+    dev=/sys/devices/i2c-0/0-0036
+fi
+
 echo linear > $dev/br::mapping  # linear exp
 echo 32768 > $dev/br::rate::up   # 8, 1024, 2048, 4096, 8192, 16384, 32768, 65538
 echo 32768 > $dev/br::rate::down # 8, 1024, 2048, 4096, 8192, 16384, 32768, 65538
@@ -25,8 +30,8 @@ echo "smartassV2" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/ondemand/up_threshold
 echo 30 > /sys/devices/system/cpu/cpu0/cpufreq/ondemand/down_differential
 echo 500000 > /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate
-echo 122880 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 600000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo 245760 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+echo 604800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
 # Flash LED configuration
 dev=/sys/devices/platform/msm_pmic_flash_led
@@ -39,3 +44,5 @@ mount -o rw,remount -t yaffs2 /dev/block/mtdblock0 /system
 chmod u+s /system/bin/charger
 mount -o ro,remount -t yaffs2 /dev/block/mtdblock0 /system
 rm -rf /data/local/download/*
+
+chmod 0150 /storage/
