@@ -29,6 +29,8 @@ USE_CAMERA_STUB := true
 include device/qcom/msm7x27/BoardConfigCommon.mk
 
 ## Kernel
+TARGET_SPECIFIC_HEADER_PATH := device/semc/msm7x27-common/include
+TARGET_KERNEL_SOURCE := kernel/semc/msm7x27
 BOARD_KERNEL_CMDLINE := console=null
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 0x00000800
@@ -39,7 +41,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/semc/msm7x27-common/custombootimg.mk
 
 ## Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-TARGET_SPECIFIC_HEADER_PATH := device/semc/msm7x27-common/include
 
 ## WebKit
 ENABLE_WEBGL := true
