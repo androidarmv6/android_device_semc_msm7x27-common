@@ -17,11 +17,9 @@ PRODUCT_PACKAGES += \
     gps.delta \
     sensors.msm7x27 \
     lights.msm7x27 \
-    audio.a2dp.default \
     audio.primary.msm7x27 \
     audio_policy.msm7x27 \
-    audio.usb.default \
-    libaudioutils
+    audio.usb.default
 
 # PowerHAL
 PRODUCT_PACKAGES += \
@@ -29,16 +27,8 @@ PRODUCT_PACKAGES += \
 
 # GPU
 PRODUCT_PACKAGES += \
-    gralloc.default \
-    gralloc.msm7x27 \
     hwcomposer.default \
-    hwcomposer.msm7x27 \
-    copybit.msm7x27 \
-    libgenlock \
-    libmemalloc \
-    libtilerenderer \
-    libqdutils \
-    liboverlay
+    hwcomposer.msm7x27
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -46,12 +36,7 @@ PRODUCT_PACKAGES += \
 
 # Omx
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libdivxdrmdecrypt \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+    libdivxdrmdecrypt
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -118,8 +103,7 @@ PRODUCT_COPY_FILES += \
 
 # Config files
 PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/etc/hw_config.sh:system/etc/hw_config.sh \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+    device/semc/msm7x27-common/prebuilt/etc/hw_config.sh:system/etc/hw_config.sh
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -374,3 +358,8 @@ endif
 # OTA Update Center
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/OTAUpdater.apk:system/app/OTAUpdater.apk
+
+
+
+# Inherit qcom/msm7x27
+$(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
