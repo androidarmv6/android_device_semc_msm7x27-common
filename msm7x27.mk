@@ -330,17 +330,6 @@ PRODUCT_COPY_FILES += \
 
 # Adreno 200 files
 PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
-    device/semc/msm7x27-common/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    device/semc/msm7x27-common/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/semc/msm7x27-common/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/semc/msm7x27-common/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-    device/semc/msm7x27-common/prebuilt/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-    device/semc/msm7x27-common/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so \
-    device/semc/msm7x27-common/prebuilt/lib/libOpenVG.so:system/lib/libOpenVG.so \
-    device/semc/msm7x27-common/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
-    device/semc/msm7x27-common/prebuilt/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/semc/msm7x27-common/prebuilt/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/semc/msm7x27-common/prebuilt/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
