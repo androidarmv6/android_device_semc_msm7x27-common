@@ -128,5 +128,8 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
+# Inherit semc-common-blobs.mk
+$(call inherit-product, vendor/semc/msm7x27-common/semc-common-blobs.mk)
+
 # Inherit qcom/msm7x27
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
