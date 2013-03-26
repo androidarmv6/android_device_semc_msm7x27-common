@@ -109,6 +109,8 @@ BOARD_CPU_COLOR_CONVERT := true
 
 ## OTA package maker
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/msm7x27-common/releasetools/semc_ota_from_target_files
+TARGET_OTA_EXTRAS_FILE := device/semc/msm7x27-common/releasetools/extras.txt
+SMALLER_FONT_FOOTPRINT := true
 
 ## Recovery
 TARGET_BOOTANIMATION_PRELOAD := true
