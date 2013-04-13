@@ -131,10 +131,8 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
-# Include google apps
-ifeq ($(MINI_GAPPS),true)
+# Install/Uninstall google apps
 $(call inherit-product, vendor/google/gapps_armv6_tiny.mk)
-endif
 
 # Inherit qcom/msm7x27
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
