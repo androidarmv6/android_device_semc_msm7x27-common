@@ -42,6 +42,11 @@ BOARD_CUSTOM_BOOTIMG_MK := device/semc/msm7x27-common/custombootimg.mk
 ## Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
+# Legacy
+TARGET_QCOM_DISPLAY_VARIANT := legacy
+TARGET_QCOM_AUDIO_VARIANT := legacy
+TARGET_QCOM_MEDIA_VARIANT := legacy
+
 ## WebKit
 ENABLE_WEBGL := true
 TARGET_WEBKIT_USE_MORE_MEMORY := true
